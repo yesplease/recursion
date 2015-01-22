@@ -1,0 +1,28 @@
+ /*
+    var holderString to hold results
+    
+    if the value is not an object and not an array, 
+         it will run toString() on it and add that to holderString
+
+    things get complicated if what we're working with is an array or an object:
+
+    if array:
+    add "[" to the string
+    for length of array, read each value, call stringifyJSON(onThatElement)
+        if value is an array or an object it will do this again
+        if value is not an array or object, call .toString()
+            add this to holderString
+            add a comma
+
+    for objects
+    add { to the string
+    For the length of the object
+        Add the key, in quotes, to the holderString
+        call stringifyJSON(onThisValue)
+            if it's not an array or an object, call .toString()
+                add this to holderString
+                add a comma
+    
+
+    return the holder string
+    */
