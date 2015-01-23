@@ -35,38 +35,7 @@
         if (object === null){
         console.log("That shit is null");
         return 'null';
-        }
-        else if (Array.isArray(object)) {
-            console.log("That's an array, baby!")
-            return arrayStringify(object);
-        }
-        else {
-            console.log("That's an object. Let's do something with it.")
-        }
-    };
-
-    var arrayStringify = function(array){
-        var arrayHolder = '[';
-        if (array.length === 0){
-            arrayHolder += ']';
-            return arrayHolder
-        }
-        else if (array.length === 1) {
-            arrayHolder += sortingHat(array[0]);
-            arrayHolder += ']';
-            return arrayHolder
-        }
-        else {
-            for (var i = 0; i < array.length - 1; i++) {
-                arrayHolder += sortingHat(array[i]);
-                arrayHolder += ",";
-            }
-            var lastElement = array.pop();
-            arrayHolder += sortingHat(lastElement);
-            arrayHolder += ']';
-            return arrayHolder;
-        }
-    };
-
-        console.log(sortingHat([5]));
+    }
+        else if (Array.isArray(objInput)) {
+        return arrayStringify(objInput);
 
