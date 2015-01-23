@@ -6,7 +6,7 @@
     var stringifyJSON = function(obj) {
       // sortingHat(obj);
       // your code goes here
-      return stringify(obj);
+      return sortingHat(obj);
     };
 
     var sortingHat = function(input) {
@@ -68,5 +68,6 @@
         }
     };
 
-        console.log(sortingHat([5]));
+console.log(JSON.stringify(  [1, 0, -1, -0.3, 0.3, 1343.32, 3345, 0.00011999999999999999]));
+console.log(sortingHat(  [1, 0, -1, -0.3, 0.3, 1343.32, 3345, 0.00011999999999999999]));
 
