@@ -13,19 +13,14 @@
         switch (typeof(input)){
             case 'object':
                 return objectifier(input);
-                break;
             case 'number':
                 return input.toString();
-                break;
             case 'string':
                 return '\"' + input + '\"';
-                break;
             case 'boolean':
                 return input.toString();
-                break;
             case 'undefined':
                 return null;
-                break;
             default:
                 console.log('Huh? Well this was unexpected.');
         }
@@ -42,6 +37,14 @@
         }
         else {
             console.log("That's an object. Let's do something with it.")
+            var objectHolder = '{';
+            if(Object.getOwnPropertyNames(object).length === 0){
+                objectHolder += '}';
+                return objectHolder;
+            }
+            for (var prop in object){
+
+            }
         }
     };
 
@@ -68,6 +71,6 @@
         }
     };
 
-console.log(JSON.stringify(  [1, 0, -1, -0.3, 0.3, 1343.32, 3345, 0.00011999999999999999]));
-console.log(sortingHat(  [1, 0, -1, -0.3, 0.3, 1343.32, 3345, 0.00011999999999999999]));
+console.log(JSON.stringify({"a": "apple"}));
+console.log(sortingHat({"a": "apple"}));
 
