@@ -11,7 +11,7 @@
     };
 
     var sortingHat = function(input) {
-        switch (typeof(input)){
+        switch (typeof (input)){
             case 'object':
                 return objectifier(input);
             case 'number':
@@ -29,7 +29,7 @@
 
     var objectifier = function(object){
         if (object === null){
-        console.log("That shit is null");
+        //console.log("That shit is null");
         return 'null';
         }
         else if (Array.isArray(object)) {
